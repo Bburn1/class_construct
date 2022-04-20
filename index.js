@@ -17,7 +17,17 @@ class Animals{
     eat(){
         console.log(`I can `);
     }
+
+    static isAnimals(obj){
+        return obj instanceof this;
+    }
+
+    
+
+    static MaxAge = 210;
+    static MaxWeight = 150000
 }
+
 
 class Mamals extends Animals{
     eat(){
@@ -29,6 +39,12 @@ class Mamals extends Animals{
     move(){
         console.log(`I can walk`) ;
     }
+
+
+    static MaxAge = 210;
+    static MaxWeight = 150000
+    
+    
 }
 
 class Birds extends Animals{
@@ -48,8 +64,7 @@ class Birds extends Animals{
         console.log(`I say chik-chirik `);
     }
 
-    static MaxAge = 23;
-    static MaxWeight = 3;
+    
 }
 
 class Fish extends Animals{
@@ -71,6 +86,7 @@ class Predators extends Mamals{
     eat(){
         console.log(`I eat meat`);
     }
+
 }
 
 class Whales extends Mamals{
@@ -92,6 +108,8 @@ class Dog extends Predators{
     eat(){
         console.log('I eat feed');
     }
+
+
 }
 
 class Dolphin extends Whales{
@@ -119,13 +137,21 @@ class Human extends Primates{
         this.limbAmout = limbAmout
     }
 
+
     say(text){
         console.log(` I say ${text}`);
     }
     eat(food){
         console.log(` I eat ${food}`);
     }
+
+    static isMamals(obj){
+        return obj instanceof this;
+    }
     
+}
+
+class Car{
 }
 
 
@@ -133,7 +159,7 @@ const jack = new Human(19,'Jack', 59,4);
 const vasyok = new Human(23,'Vasya',62,4)
 const dolphin = new Dolphin('Dolphin',5,125,0)
 const parrot = new Birds(3,'Kesha',0.5,4)
-const rex = new Dog('Rex',4,32)
+const rex = new Dog('Rex',20,32)
 const predator = new Predators()
 const shark = new Fish(3,'shark',170,0)
 
@@ -163,63 +189,13 @@ console.log(shark);
 shark.eat('small fish')
 
 
+console.log(Human.isMamals(jack));
+console.log(Animals.isAnimals(rex));
+
+console.log(Human.isMamals(shark));
+console.log(Fish.isAnimals(shark));
 
 
 
-
-
-
-
-
-
-// const toyota = new Car('Toyota','camry', 46000,3,5);
-// const bmw = new Car('bmw','x5', 80000,4);
-// const audi = new Car('Audi','A6', 22000,3);
-
-// const cars = [honda,toyota,bmw,audi]
-
-// console.log(cars.sort((a,b)=> a.price < b.price ? 1 : -1));
-
-// audi.move()
-
-
-// 'use strict'
-
-// class Transport{
-
-//     constructor(brand,model)
-//     {
-//         this.brand = brand;
-//         this.model = model;
-//     }
-
-//     move(){
-//         console.log('Suka ya letayu');
-//     }
-
-// }
-// class Plaine extends Transport{
-// }
-// class Ship extends Transport{
-// }
-// class Car extends Transport{
-//     constructor(brand,model,price,engine){
-//         super (brand,model)
-//     this.brand = brand;
-//     this.model = model;
-//     this.price = price;
-//     this.engine = engine;
-// }
-//     setPrice(price){
-//         if(price >0){
-//             this.price=price
-//         }
-//     }
-// }
-// const honda = new Car('Honda','CR_V', 42000,2);
-// const toyota = new Car('Toyota','camry', 46000,3,5);
-// const bmw = new Car('bmw','x5', 80000,4);
-// const audi = new Car('Audi','A6', 22000,3);
-// const cars = [honda,toyota,bmw,audi]
-// console.log(cars.sort((a,b)=> a.price < b.price ? 1 : -1));
-// audi.move()
+console.log(Animals.MaxWeight);
+console.log(Predators.MaxAge);
