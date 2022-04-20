@@ -8,20 +8,19 @@ class Animals{
         this.limbAmout = limbAmout
     }
 
+    say(text){
+        console.log(` I say ${text}`);
+    }
+    eat(food){
+        console.log(` I eat ${food}`);
+    }
     move(){
         console.log(`I can`) ;
-    }
-    say(){
-        console.log(`I say `);
-    }
-    eat(){
-        console.log(`I can `);
     }
 
     static isAnimals(obj){
         return obj instanceof this;
     }
-
     
     static MaxAge = 210
     static MaxWeight = 150000
@@ -38,43 +37,18 @@ class Mamals extends Animals{
     move(){
         console.log(`I can walk`) ;
     }
-
-
-    static MaxAge = 200;
-    
-    
+    static MaxAge = 200; 
 }
 
 class Birds extends Animals{
-    constructor(age,title,weight,limbAmout)
-    {
-        super(age,title,weight,limbAmout)
-        this.age = age;
-        this.title = title;
-        this.weight = weight;
-        this.limbAmout = limbAmout
-    }
-
     move(){
         console.log(`I can fly`) ;
     }
     say(){
         console.log(`I say chik-chirik `);
-    }
-
-    
+    }   
 }
-
 class Fish extends Animals{
-    constructor(age,title,weight,limbAmout)
-    {
-        super(age,title,weight,limbAmout)
-        this.age = age;
-        this.title = title;
-        this.weight = weight;
-        this.limbAmout = limbAmout
-    }
-
     eat(food){
         console.log(` I eat ${food}`);
     }
@@ -96,13 +70,6 @@ class Primates extends Mamals{
 }
 
 class Dog extends Predators{
-    constructor(title,age,weight)
-    {
-        super(title,age,weight)
-        this.title = title
-        this.age = age
-        this.weight = weight
-    }
     eat(){
         console.log('I eat feed');
     }
@@ -111,31 +78,12 @@ class Dog extends Predators{
 }
 
 class Dolphin extends Whales{
-    constructor(title,age,weight,limbAmout)
-    {
-        super(title,age,weight,limbAmout)
-        this.title = title
-        this.age = age
-        this.weight = weight
-        this.limbAmout = limbAmout
-    }
-
     move(){
         console.log(`I can swim`);
     }
 }
 
 class Human extends Primates{
-    constructor(age,title,weight,limbAmout)
-    {
-        super(age,title,weight,limbAmout)
-        this.age = age;
-        this.title = title;
-        this.weight = weight;
-        this.limbAmout = limbAmout
-    }
-
-
     say(text){
         console.log(` I say ${text}`);
     }
