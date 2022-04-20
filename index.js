@@ -17,11 +17,9 @@ class Animals{
     move(mv){
         console.log(`I can ${mv}`) ;
     }
-
     static isAnimals(obj){
         return obj instanceof this;
     }
-    
     static MaxAge = 210
     static MaxWeight = 150000
 }
@@ -38,9 +36,7 @@ class Predators extends Mamals{
     console.log(` I eat ${food}`);
 }}
 
-class Whales extends Mamals{
-    
-}
+class Whales extends Mamals{  }
 
 class Primates extends Mamals{
     move(){console.log(`I can run`);}
@@ -48,8 +44,7 @@ class Primates extends Mamals{
 
 class Dog extends Predators{ }
 
-class Dolphin extends Whales{
-}
+class Dolphin extends Whales{   }
 
 class Human extends Primates{   }
 
@@ -88,8 +83,6 @@ shark.eat('small fish')
 
 
 console.log(Animals.isAnimals(rex));
-
-
 
 console.log(Animals.MaxWeight);
 console.log(Predators.MaxAge);
