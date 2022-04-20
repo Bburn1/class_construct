@@ -31,10 +31,7 @@ class Birds extends Animals{  }
 
 class Fish extends Animals{ }
 
-class Predators extends Mamals{ 
-    eat(food){
-    console.log(` I eat ${food}`);
-}}
+class Predators extends Mamals{ }
 
 class Whales extends Mamals{  }
 
@@ -52,9 +49,9 @@ const jack = new Human(19,'Jack', 59,4);
 const vasyok = new Human(23,'Vasya',62,4)
 const dolphin = new Dolphin('Dolphin',5,125,0)
 const parrot = new Birds(3,'Kesha',0.5,4)
-const rex = new Dog('Rex',20,32)
+const rex = new Dog(3,'Rex',20,4)
 const predator = new Predators()
-const shark = new Fish(3,'shark',170,0)
+const shark = new Fish(3,'shark',170)
 
 
 console.log(jack);
@@ -80,7 +77,6 @@ rex.eat("feed")
 
 console.log(shark);
 shark.eat('small fish')
-
 
 console.log(Animals.isAnimals(rex));
 
