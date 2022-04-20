@@ -35,15 +35,14 @@ class Predators extends Mamals{ }
 
 class Whales extends Mamals{  }
 
-class Primates extends Mamals{
-    move(){console.log(`I can run`);}
+class Primates extends Mamals{ move(){console.log('i can run');}
 }
 
 class Dog extends Predators{ }
 
 class Dolphin extends Whales{   }
 
-class Human extends Primates{   }
+class Human extends Primates{ }  
 
 const jack = new Human(19,'Jack', 59,4);
 const vasyok = new Human(23,'Vasya',62,4)
@@ -54,6 +53,7 @@ const predator = new Predators()
 const shark = new Fish(3,'shark',170)
 
 
+
 console.log(jack);
 jack.say(': "say palanitsya"')
 jack.eat('salo')
@@ -62,6 +62,7 @@ jack.move()
 console.log(vasyok);
 vasyok.say('Glory to Ukraine')
 vasyok.eat('palanitsya')
+
 
 console.log(parrot);
 parrot.move("fly")
