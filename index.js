@@ -23,8 +23,7 @@ class Animals{
     }
 
     
-
-    static MaxAge = 210;
+    static MaxAge = 210
     static MaxWeight = 150000
 }
 
@@ -41,8 +40,7 @@ class Mamals extends Animals{
     }
 
 
-    static MaxAge = 210;
-    static MaxWeight = 150000
+    static MaxAge = 200;
     
     
 }
@@ -199,3 +197,4 @@ console.log(Fish.isAnimals(shark));
 
 console.log(Animals.MaxWeight);
 console.log(Predators.MaxAge);
+console.log(Animals.MaxAge);
