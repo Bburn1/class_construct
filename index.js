@@ -160,7 +160,7 @@ const shark = new Fish(3,'shark',170,0)
 
 console.log(jack);
 jack.say(': "say palanitsya"')
-jack.eat('rosiyske nemovlya')
+jack.eat('salo')
 jack.move()
 
 console.log(vasyok);
