@@ -149,10 +149,6 @@ class Human extends Primates{
     
 }
 
-class Car{
-}
-
-
 const jack = new Human(19,'Jack', 59,4);
 const vasyok = new Human(23,'Vasya',62,4)
 const dolphin = new Dolphin('Dolphin',5,125,0)
