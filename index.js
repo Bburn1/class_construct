@@ -49,9 +49,6 @@ class Primates extends Mamals{
 class Dog extends Predators{ }
 
 class Dolphin extends Whales{
-    move(){
-        console.log(`I can swim`);
-    }
 }
 
 class Human extends Primates{   }
@@ -79,7 +76,7 @@ parrot.move("fly")
 parrot.say("chik-chirik")
 
 console.log(dolphin);
-dolphin.move()
+dolphin.move("swim")
 
 predator.eat("meat")
 
