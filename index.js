@@ -14,8 +14,8 @@ class Animals{
     eat(food){
         console.log(` I eat ${food}`);
     }
-    move(){
-        console.log(`I can`) ;
+    move(mv){
+        console.log(`I can ${mv}`) ;
     }
 
     static isAnimals(obj){
@@ -27,39 +27,16 @@ class Animals{
 }
 
 
-class Mamals extends Animals{
-    eat(){
-        console.log('I eat fruit');
-    }
-    say(){
-        console.log('I can drink milk');
-    }
-    move(){
-        console.log(`I can walk`) ;
-    }
-    static MaxAge = 200; 
-}
+class Mamals extends Animals{ static MaxAge = 200;}
 
-class Birds extends Animals{
-    move(){
-        console.log(`I can fly`) ;
-    }
-    say(){
-        console.log(`I say chik-chirik `);
-    }   
-}
-class Fish extends Animals{
+class Birds extends Animals{  }
+
+class Fish extends Animals{ }
+
+class Predators extends Mamals{ 
     eat(food){
-        console.log(` I eat ${food}`);
-    }
-}
-
-class Predators extends Mamals{
-    eat(){
-        console.log(`I eat meat`);
-    }
-
-}
+    console.log(` I eat ${food}`);
+}}
 
 class Whales extends Mamals{
     
@@ -69,13 +46,7 @@ class Primates extends Mamals{
     move(){console.log(`I can run`);}
 }
 
-class Dog extends Predators{
-    eat(){
-        console.log('I eat feed');
-    }
-
-
-}
+class Dog extends Predators{ }
 
 class Dolphin extends Whales{
     move(){
@@ -83,19 +54,7 @@ class Dolphin extends Whales{
     }
 }
 
-class Human extends Primates{
-    say(text){
-        console.log(` I say ${text}`);
-    }
-    eat(food){
-        console.log(` I eat ${food}`);
-    }
-
-    static isMamals(obj){
-        return obj instanceof this;
-    }
-    
-}
+class Human extends Primates{   }
 
 const jack = new Human(19,'Jack', 59,4);
 const vasyok = new Human(23,'Vasya',62,4)
@@ -116,26 +75,22 @@ vasyok.say('Glory to Ukraine')
 vasyok.eat('palanitsya')
 
 console.log(parrot);
-parrot.move()
-parrot.say()
+parrot.move("fly")
+parrot.say("chik-chirik")
 
 console.log(dolphin);
 dolphin.move()
 
-predator.eat()
+predator.eat("meat")
 
 console.log(rex);
-rex.eat()
+rex.eat("feed")
 
 console.log(shark);
 shark.eat('small fish')
 
 
-console.log(Human.isMamals(jack));
 console.log(Animals.isAnimals(rex));
-
-console.log(Human.isMamals(shark));
-console.log(Fish.isAnimals(shark));
 
 
 
